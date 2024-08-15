@@ -13,92 +13,114 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
+      color: Colors.white,
       debugShowCheckedModeBanner: false,
       home: SafeArea(
         child: Column(
           children: <Widget>[
             Expanded(
-              child: TextButton(
-                onPressed: () async {
-                  AudioCache.instance = AudioCache(prefix: '');
-                  final player = AudioPlayer();
-                  await player.play(
-                    AssetSource('assets/note1.wav'),
-                  );
-                },
-                child: Text('Note1'),
+              child: Container(
+                color: Colors.redAccent,
+                child: TextButton(
+                  onPressed: () async {
+                    AudioCache.instance = AudioCache(prefix: '');
+                    final player = AudioPlayer();
+                    await player.play(
+                      AssetSource('assets/note1.wav'),
+                    );
+                  },
+                  child: Text(''),
+                ),
               ),
             ),
             Expanded(
-              child: TextButton(
-                onPressed: () async {
-                  AudioCache.instance = AudioCache(prefix: '');
-                  final player = AudioPlayer();
-                  await player.play(
-                    AssetSource('assets/note2.wav'),
-                  );
-                },
-                child: Text('Note2'),
+              child: Container(
+                color: Colors.deepOrangeAccent,
+                child: TextButton(
+                  onPressed: () async {
+                    AudioCache.instance = AudioCache(prefix: '');
+                    final player = AudioPlayer();
+                    await player.play(
+                      AssetSource('assets/note2.wav'),
+                    );
+                  },
+                  child: Text(''),
+                ),
               ),
             ),
             Expanded(
-              child: TextButton(
-                onPressed: () async {
-                  AudioCache.instance = AudioCache(prefix: '');
-                  final player = AudioPlayer();
-                  await player.play(
-                    AssetSource('assets/note3.wav'),
-                  );
-                },
-                child: Text('Note3'),
+              child: Container(
+                color: Colors.yellowAccent,
+                child: TextButton(
+                  onPressed: () async {
+                    AudioCache.instance = AudioCache(prefix: '');
+                    final player = AudioPlayer();
+                    await player.play(
+                      AssetSource('assets/note3.wav'),
+                    );
+                  },
+                  child: Text(''),
+                ),
               ),
             ),
             Expanded(
-              child: TextButton(
-                onPressed: () async {
-                  AudioCache.instance = AudioCache(prefix: '');
-                  final player = AudioPlayer();
-                  await player.play(
-                    AssetSource('assets/note4.wav'),
-                  );
-                },
-                child: Text('Note4'),
+              child: Container(
+                color: Colors.lightGreenAccent,
+                child: TextButton(
+                  onPressed: () async {
+                    AudioCache.instance = AudioCache(prefix: '');
+                    final player = AudioPlayer();
+                    await player.play(
+                      AssetSource('assets/note4.wav'),
+                    );
+                  },
+                  child: Text(''),
+                ),
               ),
             ),
             Expanded(
-              child: TextButton(
-                onPressed: () async {
-                  AudioCache.instance = AudioCache(prefix: '');
-                  final player = AudioPlayer();
-                  await player.play(
-                    AssetSource('assets/note5.wav'),
-                  );
-                },
-                child: Text('Note5'),
+              child: Container(
+                color: Colors.teal,
+                child: TextButton(
+                  onPressed: () async {
+                    AudioCache.instance = AudioCache(prefix: '');
+                    final player = AudioPlayer();
+                    await player.play(
+                      AssetSource('assets/note5.wav'),
+                    );
+                  },
+                  child: Text(''),
+                ),
               ),
             ),
             Expanded(
-              child: TextButton(
-                onPressed: () async {
-                  AudioCache.instance = AudioCache(prefix: '');
-                  final player = AudioPlayer();
-                  await player.play(
-                    AssetSource('assets/note6.wav'),
-                  );
-                },
-                child: Text('Note6'),
+              child: Container(
+                color: Colors.lightBlue,
+                child: TextButton(
+                  onPressed: () async {
+                    AudioCache.instance = AudioCache(prefix: '');
+                    final player = AudioPlayer();
+                    await player.play(
+                      AssetSource('assets/note6.wav'),
+                    );
+                  },
+                  child: Text(''),
+                ),
               ),
             ),
             Expanded(
-              child: TextButton(
-                onPressed: () async {
-                  AudioCache.instance = AudioCache(prefix: '');
-                  final player = AudioPlayer();
-                  await player.play(
-                    AssetSource('assets/note7.wav'),
-                  );
-                },
-                child: Text('Note7'),
+              child: Container(
+                color: Colors.purple,
+                child: TextButton(
+                  onPressed: () async {
+                    AudioCache.instance = AudioCache(prefix: '');
+                    final player = AudioPlayer();
+                    await player.play(
+                      AssetSource('assets/note7.wav'),
+                    );
+                  },
+                  child: Text(''),
+                ),
               ),
             ),
           ],
