@@ -16,29 +16,58 @@ class MyApp extends StatelessWidget {
     );
   }
 
+  Expanded buttonBuilder(int buttonNumber,
+      {required MaterialColor backgroundColor}) {
+    return Expanded(
+      child: TextButton(
+        style: TextButton.styleFrom(backgroundColor: backgroundColor),
+        onPressed: () async {
+          boomBox(buttonNumber);
+        },
+        child: Text(''),
+      ),
+    );
+  }
+
   // This widget is the root of your application.
   @override
   Widget build(BuildContext context) {
+    int buttonNumber;
     return MaterialApp(
-      color: Colors.white,
+      // color: Colors.white,
       debugShowCheckedModeBanner: false,
       home: SafeArea(
         child: Column(
+          crossAxisAlignment: CrossAxisAlignment.stretch,
           children: <Widget>[
-            Expanded(
+            buttonBuilder(buttonNumber = 1, backgroundColor: Colors.red),
+            buttonBuilder(buttonNumber = 2, backgroundColor: Colors.orange),
+            buttonBuilder(buttonNumber = 3, backgroundColor: Colors.yellow),
+            buttonBuilder(buttonNumber = 4, backgroundColor: Colors.green),
+            buttonBuilder(buttonNumber = 5, backgroundColor: Colors.teal),
+            buttonBuilder(buttonNumber = 6, backgroundColor: Colors.blue),
+            buttonBuilder(buttonNumber = 7, backgroundColor: Colors.purple),
+          ],
+        ),
+      ),
+    );
+  }
+}
+
+/*      child: TextButton(
+            onPressed: () async {
+              AudioCache.instance = AudioCache(prefix: '');
+              final player = AudioPlayer();
+              await player.play(
+                AssetSource('assets/note1.wav'),
+              );
+            },
+            child: const Text('click meee'),
+          ),
+ Expanded(
               child: Container(
-                color: Colors.redAccent,
-                child: TextButton(
-                  onPressed: () async {
-                    boomBox(1);
-                  },
-                  child: Text(''),
-                ),
-              ),
-            ),
-            Expanded(
-              child: Container(
-                color: Colors.deepOrangeAccent,
+                //   width: 5000,
+                color: Colors.orange,
                 child: TextButton(
                   onPressed: () async {
                     boomBox(2);
@@ -49,6 +78,7 @@ class MyApp extends StatelessWidget {
             ),
             Expanded(
               child: Container(
+                //  width: 5000,
                 color: Colors.yellowAccent,
                 child: TextButton(
                   onPressed: () async {
@@ -60,6 +90,7 @@ class MyApp extends StatelessWidget {
             ),
             Expanded(
               child: Container(
+                //   width: 5000,
                 color: Colors.lightGreenAccent,
                 child: TextButton(
                   onPressed: () async {
@@ -71,6 +102,7 @@ class MyApp extends StatelessWidget {
             ),
             Expanded(
               child: Container(
+                //   width: 5000,
                 color: Colors.teal,
                 child: TextButton(
                   onPressed: () async {
@@ -82,6 +114,7 @@ class MyApp extends StatelessWidget {
             ),
             Expanded(
               child: Container(
+                //   width: 5000,
                 color: Colors.lightBlue,
                 child: TextButton(
                   onPressed: () async {
@@ -93,6 +126,7 @@ class MyApp extends StatelessWidget {
             ),
             Expanded(
               child: Container(
+                //    width: 5000,
                 color: Colors.purple,
                 child: TextButton(
                   onPressed: () async {
@@ -102,21 +136,4 @@ class MyApp extends StatelessWidget {
                 ),
               ),
             ),
-          ],
-        ),
-      ),
-    );
-  }
-}
-/*      child: TextButton(
-            onPressed: () async {
-              AudioCache.instance = AudioCache(prefix: '');
-              final player = AudioPlayer();
-              await player.play(
-                AssetSource('assets/note1.wav'),
-              );
-            },
-            child: const Text('click meee'),
-          ),
-
  */
