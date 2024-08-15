@@ -57,10 +57,7 @@ class MyApp extends StatelessWidget {
 /*      child: TextButton(
             onPressed: () async {
               AudioCache.instance = AudioCache(prefix: '');
-              final player = AudioPlayer();
-              await player.play(
-                AssetSource('assets/note1.wav'),
-              );
+
             },
             child: const Text('click meee'),
           ),
