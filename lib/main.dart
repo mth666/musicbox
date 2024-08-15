@@ -24,7 +24,7 @@ class MyApp extends StatelessWidget {
         onPressed: () async {
           boomBox(buttonNumber);
         },
-        child: Text(''),
+        child: const Text(''),
       ),
     );
   }
@@ -32,7 +32,7 @@ class MyApp extends StatelessWidget {
   // This widget is the root of your application.
   @override
   Widget build(BuildContext context) {
-    int buttonNumber;
+    int buttonNumber = 0;
     return MaterialApp(
       // color: Colors.white,
       debugShowCheckedModeBanner: false,
